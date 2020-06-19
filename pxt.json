@@ -4,7 +4,8 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "maqueen": "github:dfrobot/pxt-maqueen#v1.3.1"
+        "maqueen": "github:dfrobot/pxt-maqueen#v1.3.1",
+        "neopixel": "github:microsoft/pxt-neopixel#v0.7.3"
     },
     "files": [
         "main.blocks",
@@ -16,5 +17,6 @@
     ],
     "supportedTargets": [
         "microbit"
-    ]
+    ],
+    "preferredEditor": "blocksprj"
 }
