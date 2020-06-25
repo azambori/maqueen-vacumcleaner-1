@@ -2,6 +2,7 @@ input.onButtonPressed(Button.A, function () {
     Run = 0
 })
 input.onButtonPressed(Button.B, function () {
+    music.playMelody("- C5 C G D A - - ", 120)
     Run = 1
 })
 let Run = 0
@@ -16,6 +17,7 @@ strip.setPixelColor(1, neopixel.colors(NeoPixelColors.Red))
 strip.setPixelColor(2, neopixel.colors(NeoPixelColors.Blue))
 strip.setPixelColor(3, neopixel.colors(NeoPixelColors.Red))
 strip.show()
+pins.digitalWritePin(DigitalPin.P0, 0)
 basic.forever(function () {
     if (Run == 1) {
         maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 20)
