@@ -20,6 +20,7 @@ strip.show()
 pins.digitalWritePin(DigitalPin.P0, 0)
 basic.forever(function () {
     if (Run == 1) {
+        strip.show()
         maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 20)
         basic.showArrow(ArrowNames.South)
         while (maqueen.Ultrasonic(PingUnit.Centimeters) < 20) {
@@ -33,6 +34,7 @@ basic.forever(function () {
         }
     } else {
         maqueen.motorStop(maqueen.Motors.All)
+        strip.clear()
     }
 })
 basic.forever(function () {
